@@ -21,8 +21,7 @@ logging_into_application()
 
 
 #Add the products to cart
-def Add_to_cart():
-     driver=logging_into_application()
+def Add_to_cart(driver):
      driver.find_element(*addToCart.BackpackLocator).click()
      driver.find_element(*addToCart.TshirtLocator).click()
      driver.find_element(*addToCart.CheckoutLocator).click()
@@ -50,5 +49,5 @@ def Add_to_cart():
          print("cart section is not opened properly")
          
 
-Add_to_cart()
+Add_to_cart(driver=logging_into_application())
      
